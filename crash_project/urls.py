@@ -19,8 +19,8 @@ from django.urls import path, include
 from crash_app import urls as crash_app_urls
 
 urlpatterns = [
-
+    path('' , include('home.urls')),
     path('admin/', admin.site.urls),
-    path('', include(crash_app_urls)),
+    path('api/', include(crash_app_urls)),
     
 ]
